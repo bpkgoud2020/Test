@@ -12,7 +12,7 @@ export class App {
   constructor() { }
   
   configureRouter(config: RouterConfiguration, router: Router) {
-    alert('in app constructor');
+    //alert('in app constructor');
     config.title = 'Applicants';
     config.options.pushState = true;
     config.options.root = '/';
