@@ -1,0 +1,150 @@
+<template>
+  <div class="card">
+    <div class="card-header text-white bg-primary">
+      <div class="float-left">Applicant Profile Entry</div>
+      <div class="float-right">
+        <div class="form-group row">
+          <label class="col-md-offset-1 col-form-label">Locale : </label>
+          <div class="col-md-offset-4">
+            <select type="radio" ref="locale" placeholder="locale" class="form-control">
+              <option> English </option>
+              <option> Germany </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <form role="form" >
+        <!--<div validation-errors.bind="errors">
+          <input type="text" placeholder="errInfo" value.bind="errInfo & validate" required>
+
+          <ul if.bind="controller.errors">
+            <li repeat.for="error of controller.errors">
+              ${error.message}
+            </li>
+          </ul>-->
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">ID</label>
+          <div class="col-md-9">
+            <input type="text" ref="ID" placeholder="Id" focus.bind="txtIdHasFocus" class="form-control" value.bind="applicant.id">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Name</label>
+          <div class="col-md-9">
+            <!--<input type="text" placeholder="Name" class="form-control" focus.bind="txtNameHasFocus" value.bind="applicant.name & validate">-->
+            <input type="text" placeholder="Name" class="form-control" focus.bind="txtNameHasFocus" value.bind="applicant.name">
+
+
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">FamilyName</label>
+          <div class="col-md-9">
+            <input type="text" placeholder="FamilyName" class="form-control" value.bind="applicant.familyName">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Address</label>
+          <div class="col-md-9">
+            <input type="text" placeholder="Address" class="form-control" value.bind="applicant.address">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Country</label>
+          <div class="col-md-9">
+            <input type="text" placeholder="CountryOfOrigin" class="form-control" value.bind="applicant.countryOfOrigin">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Email</label>
+          <div class="col-md-9">
+            <input type="text" placeholder="EmailAddress" class="form-control" value.bind="applicant.emailAddress">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Age</label>
+          <div class="col-md-9">
+            <input type="text" placeholder="age" class="form-control" value.bind="applicant.age">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Hired</label>
+          <div class="col-md-9">
+            <input type="checkbox" placeholder="hired" class="float-left form-control" checked.bind="applicant.hired">
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <input class="col-md-4 btn btn-success" type="button" id="btnInsert" value="Add   " click.delegate="insertApplicant(applicant)" /></td>
+    <input class="col-md-4 btn btn-success" type="button" id="btnUpdate" value="Update" click.delegate="updateApplicant(applicant)" />
+    <input class="col-md-4 btn btn-success" type="button" id="btnDelete" value="Delete" click.delegate="deleteApplicant(applicant)" />
+
+  </div>
+
+
+  
+
+    <div class="card-header text-white bg-primary">
+      Applicant List
+    </div>
+    <!--<div>
+      <table class="table table-striped" if.bind="applicants">
+        <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">FamilyName</th>
+          <th scope="col">Address</th>
+          <th scope="col">country</th>
+          <th scope="col">email</th>
+          <th scope="col">age</th>
+          <th scope="col">hired</th>
+
+
+        </tr>
+      </thead>
+        <tbody>-->
+
+
+
+          <!--<tr repeat.for="applicant of applicants">
+
+          <td scope="row">${applicant.id}</td>
+          <td>${applicant.name}</td>
+          <td>${applicant.familyName}</td>
+          <td>${applicant.address}</td>
+          <td>${applicant.countryOfOrigin}</td>
+          <td>${applicant.emailAddress}</td>
+          <td>${applicant.age}</td>
+          <td>${applicant.hired}</td>
+
+        </tr>-->
+        <!--</tbody>
+      </table>
+    </div>-->
+
+
+    <div class="list-group">
+      <a repeat.for="applicant of applicants" class="list-group-item list-group-item-action ${applicant.id === $parent.selectedId ? 'active' : ''}" route-href="route: applist; params.bind: {id:applicant.Id}" click.delegate="$parent.select(applicant)">
+        <strong>${applicant.id}  |  ${applicant.name} | ${applicant.address} | ${applicant.countryOfOrigin} | ${applicant.age} | ${applicant.hired}  </strong><br>
+        <small>${applicant.emailAddress}</small>
+      </a>
+    </div>
+
+</template>

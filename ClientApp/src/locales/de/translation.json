@@ -1,0 +1,14 @@
+{
+  "Id": "ID:",
+  "Name": "Name:",
+  "FamilyName": "Nachname:",
+  "Address": "Adresse:",
+  "CountryOfOrigin": "Land:",
+  "EmailAddress": "E-Mail-Addresse:",
+  "Age": "Alter:",
+  "Hired": "Gemietet:",
+  "Applicants": "Bewerber",
+  "AddApplicant": "Antragsteller hinzufügen",
+  "UpdateApplicant": "Antragsteller aktualisieren",
+  "DeleteApplicant": "Antragsteller löschen"
+}

@@ -1,0 +1,16 @@
+{
+  "Id": "ID",
+  "Name": "Name:",
+  "FamilyName": "FamilyName:",
+  "Address": "Address:",
+  "CountryOfOrigin": "Country:",
+  "EmailAddress": "EmailAddress:",
+  "Age": "Age:",
+  "Hired": "Hired:",
+  "Applicants": "Applicants",
+  "AddApplicant": "Add Applicant",
+  "UpdateApplicant": "Update Applicant",
+  "DeleteApplicant": "Delete Applicant"
+}
+  
+
