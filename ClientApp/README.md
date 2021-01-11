@@ -29,7 +29,7 @@ Aurelia Component
     - npm install aurelia-validation
 
 Run below command to build the clientApp source.
-npm start build
+- npm start build
 
 
 ## Run dev app
